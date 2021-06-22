@@ -29,10 +29,10 @@ feign:
   sentinel:
     enabled: true
 mybatis-plus:
-  mapper-locations: classpath:mapper/pms/**/*.xml
+  mapper-locations: classpath:mapper/pms/**/*.xml #读取映射文件
   configuration:
     global-config:
       db-config:
-        id-type: auto
+        id-type: auto #默认使用数据库自增
     type-aliases-package: com.atguigu.gmall.pms.entity
 
