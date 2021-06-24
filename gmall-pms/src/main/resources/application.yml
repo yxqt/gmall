@@ -35,4 +35,6 @@ mybatis-plus:
       db-config:
         id-type: auto #默认使用数据库自增
     type-aliases-package: com.atguigu.gmall.pms.entity
-
+logging:
+  level:
+    com.atguigu.gmall: debug

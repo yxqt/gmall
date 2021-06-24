@@ -1,6 +1,9 @@
 package com.atguigu.gmall.pms.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -24,6 +27,14 @@ public class SkuServiceImpl extends ServiceImpl<SkuMapper, SkuEntity> implements
         );
 
         return new PageResultVo(page);
+    }
+
+    @Override
+    public List<SkuEntity> querySkuBySpuId(Long spuId) {
+        LambdaQueryWrapper<SkuEntity> wrapper = new LambdaQueryWrapper<>();
+        wrapper.eq(SkuEntity::getSpuId,spuId);
+        List<SkuEntity> skuEntities = baseMapper.selectList(wrapper);
+        return skuEntities;
     }
 
 }

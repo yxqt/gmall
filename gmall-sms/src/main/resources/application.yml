@@ -21,7 +21,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: root
-    url: jabc:mysql://192.168.164.38:3306/guli_sms
+    url: jdbc:mysql://192.168.164.38:3306/guli_sms
   redis:
     port: 6379
     host: 192.168.164.38
@@ -29,9 +29,9 @@ feign:
   sentinel:
     enabled: true
     mybatis-plus:
-      mapper-locations: classpath:mapper/pms/**/*.xml #¶ÁÈ¡Ó³ÉäÎÄ¼þ
+      mapper-locations: classpath:mapper/pms/**/*.xml #ï¿½ï¿½È¡Ó³ï¿½ï¿½ï¿½Ä¼ï¿½
       configuration:
         global-config:
           db-config:
-            id-type: auto #Ä¬ÈÏÊ¹ÓÃÊý¾Ý¿â×ÔÔö
+            id-type: auto #Ä¬ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½
         type-aliases-package: com.atguigu.gmall.pms.entity
